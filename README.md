@@ -50,7 +50,7 @@ docker run -d \
   -e SERVER_PORT=8080 \
   -e SECURITY_BASIC_AUTH_USERNAME=admin \
   -e SECURITY_BASIC_AUTH_PASSWORD=admin123 \
-  mmmm11111/swagger-doc-view:latest
+  mmmm11111/swagger-doc-view:v1.0.1
 ```
 
 - 访问
@@ -64,7 +64,7 @@ docker run -d \
 version: "3.8"
 services:
   swagger-doc-view:
-    image: mmmm11111/swagger-doc-view:latest
+    image: mmmm11111/swagger-doc-view:v1.0.1
     # 或使用 build 直接构建
     # build: .
     container_name: swagger-doc-view
