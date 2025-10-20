@@ -1,11 +1,9 @@
 # Swagger Doc View 页面功能简述
 
-此页面（`index.html`）是一个纯静态的 Swagger / OpenAPI 文档查看与轻量测试工具，仅做下面这些事情：
+此页面 Swagger / OpenAPI 文档查看与轻量测试工具，仅做下面这些事情：
 ![img.png](img.png)
 1. 加载接口文档
-   - 输入并加载 swagger-config 或单个 `/v3/api-docs` 地址。
-   - 若输入基础地址会尝试自动补全 `.../v3/api-docs/swagger-config`。
-   - 支持从已保存的配置列表中直接选择加载。
+   - 输入并加载 `http://host:port/xxx/v3/api-docs/swagger-config` 地址。
 
 2. 管理文档配置
    - 新增 / 编辑 / 删除保存的 Swagger 文档地址（持久化在后端 H2 数据库）。
