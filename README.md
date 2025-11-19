@@ -44,13 +44,12 @@
 
 docker run -d \
   --name swagger-doc-view \
-  -p 8080:8080 \
+  -p 8080:80 \
   -v $(pwd)/data:/app/data \
   -e TZ=Asia/Shanghai \
-  -e SERVER_PORT=8080 \
   -e SECURITY_BASIC_AUTH_USERNAME=admin \
   -e SECURITY_BASIC_AUTH_PASSWORD=admin123 \
-  mmmm11111/swagger-doc-view:v1.0.6
+  mmmm11111/swagger-doc-view:v1.1.0
 ```
 
 - 访问
@@ -64,15 +63,12 @@ docker run -d \
 version: "3.8"
 services:
   swagger-doc-view:
-    image: mmmm11111/swagger-doc-view:v1.0.6
-    # 或使用 build 直接构建
-    # build: .
+    image: mmmm11111/swagger-doc-view:v1.1.0
     container_name: swagger-doc-view
     ports:
-      - "8080:8080"
+      - "8080:80"
     environment:
       TZ: Asia/Shanghai
-      SERVER_PORT: 8080
       SECURITY_BASIC_AUTH_USERNAME: admin
       SECURITY_BASIC_AUTH_PASSWORD: admin123
     volumes:
