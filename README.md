@@ -49,7 +49,7 @@ docker run -d \
   -e TZ=Asia/Shanghai \
   -e SECURITY_BASIC_AUTH_USERNAME=admin \
   -e SECURITY_BASIC_AUTH_PASSWORD=admin123 \
-  mmmm11111/swagger-doc-view:v1.1.1
+  mmmm11111/swagger-doc-view:v1.1.2
 ```
 
 - 访问
@@ -63,7 +63,7 @@ docker run -d \
 version: "3.8"
 services:
   swagger-doc-view:
-    image: mmmm11111/swagger-doc-view:v1.1.1
+    image: mmmm11111/swagger-doc-view:v1.1.2
     container_name: swagger-doc-view
     ports:
       - "8080:80"
